@@ -57,6 +57,10 @@
             <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg>
             <span>Instagram ↗</span>
           </a>
+          <a class="bento-card social-tile" href="{{ config('portfolio.viber_url') }}" aria-label="Chat with Vince on Viber" title="Opens the Viber app if installed">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 6.5c-1.6 1.8-2.3 5.8-.7 8.4l-1 4 4.1-1.2c3.4 1.8 8.6.6 10.6-2.4 1.8-2.7 1.8-6.1.2-8.6C16.4 3.2 8.7 3 5.5 6.5Z"/><path d="M9 8.5c-.7.5-.6 1.3-.2 2.3.9 2.1 2.1 3.3 4.3 4.3 1 .4 1.8.5 2.3-.2l.4-1.2-2.1-1.3-1 1c-1.1-.5-2.1-1.5-2.6-2.6l1-1-1.3-2.1Z"/></svg>
+            <span>Viber ↗</span>
+          </a>
         </div>
 
         <article class="bento-card statement-card reveal">
@@ -137,7 +141,7 @@
       </section>
 
       <section class="bento-section contact-section reveal" id="contact"><span class="micro-label">03 / GET IN TOUCH</span><h2>Let's make something <em>happen.</em></h2><p>Have a collaboration, project, or opportunity in mind? I'd love to hear from you.</p>
-        <div class="contact-buttons"><a class="contact-primary" href="mailto:{{ config('portfolio.email') }}">Email me ↗</a><a href="tel:{{ preg_replace('/[^+0-9]/', '', config('portfolio.phone')) }}">{{ config('portfolio.phone') }}</a><a href="{{ config('portfolio.linkedin') }}" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="{{ config('portfolio.github') }}" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+        <div class="contact-buttons"><a class="contact-primary" href="mailto:{{ config('portfolio.email') }}">Email me ↗</a><a href="{{ config('portfolio.viber_url') }}" title="Opens Viber if installed">Chat on Viber ↗</a><a href="{{ config('portfolio.linkedin') }}" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="{{ config('portfolio.github') }}" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div><p class="viber-fallback">Viber number: {{ config('portfolio.phone') }} · If the chat link does not open, find me by number in the Viber app.</p>
       </section>
     </main>
     <footer class="bento-footer"><a class="bento-brand" href="#home">Vince<span>.</span></a><div><a href="#home">Home</a><a href="#about">About</a><a href="#work">Work</a><a href="#contact">Contact</a></div><small>© {{ date('Y') }} Vince M. Ybañez. Built with Laravel.</small></footer>

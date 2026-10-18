@@ -6,6 +6,8 @@ return [
     // Resume spells the address "gmai.com". Keep unconfirmed contact data unpublished.
     'email' => env('PORTFOLIO_EMAIL', 'vinceybanez722@gmail.com'),
     'phone' => '+63906-536-2004',
+    // Opens Viber on devices with the app installed. Update the number if your Viber account differs.
+    'viber_url' => 'viber://chat?number=%2B639065362004',
     'facebook' => 'https://www.facebook.com/vince.ybanez.3/',
     'instagram' => 'https://www.instagram.com/04beans_/',
     'github' => env('PORTFOLIO_GITHUB', 'https://github.com/BEaaNSs'),
