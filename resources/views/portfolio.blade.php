@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Portfolio of Vince M. Ybañez — junior software engineer, Laravel developer and creator of web and mobile applications.">
   <title>Vince M. Ybañez — Software Developer</title>
-  <link rel="stylesheet" href="{{ secure_asset('css/portfolio.css') }}">
-  <link rel="stylesheet" href="{{ secure_asset('css/bento.css') }}">
-  <script defer src="{{ secure_asset('js/portfolio.js') }}"></script>
-  <script defer src="{{ secure_asset('js/bento.js') }}"></script>
+  <link rel="stylesheet" href="{{ '/css/portfolio.css' }}">
+  <link rel="stylesheet" href="{{ '/css/bento.css' }}">
+  <script defer src="{{ '/js/portfolio.js' }}"></script>
+  <script defer src="{{ '/js/bento.js' }}"></script>
 </head>
 <body class="bento-site">
   <div class="progress" id="scroll-progress" aria-hidden="true"></div>
@@ -40,6 +40,10 @@
           <a class="bento-card social-tile" href="{{ config('portfolio.linkedin') }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v11M4 4v.1M9 20v-11h4v1.7c.6-1.2 1.6-2 3.3-2 3.2 0 3.7 2.1 3.7 4.8V20M3 9h2M3 20h2M9 9h4"/></svg>
             <span>LinkedIn ↗</span>
+          </a>
+          <a class="bento-card social-tile" href="{{ config('portfolio.github') }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 6v-3.9c0-1.1.1-1.5-.5-2.1 2.7-.3 5.5-1.3 5.5-6A4.6 4.6 0 0 0 18.7 6.8 4.3 4.3 0 0 0 18.6 3S17.6 2.7 15 4.5a13.8 13.8 0 0 0-6 0C6.4 2.7 5.4 3 5.4 3a4.3 4.3 0 0 0-.1 3.8A4.6 4.6 0 0 0 4 10c0 4.7 2.8 5.7 5.5 6-.6.6-.6 1.2-.5 2.1V22"/></svg>
+            <span>GitHub ↗</span>
           </a>
           <a class="bento-card social-tile" href="mailto:{{ config('portfolio.email') }}" aria-label="Send me an email">
             <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg>
@@ -84,7 +88,7 @@
             @foreach(array_slice($projects, 0, 2) as $project)
               <a class="feature-preview" href="{{ route('projects.show', $project['slug']) }}" aria-label="See {{ $project['title'] }} project">
                 @if(!empty($project['image']))
-                  <img src="{{ asset($project['image']) }}" alt="{{ $project['title'] }} screenshot" loading="lazy">
+                  <img src="{{ '/' . ltrim($project['image'], '/') }}" alt="{{ $project['title'] }} screenshot" loading="lazy">
                 @endif
                 <span>{{ $project['title'] }} <b>↗</b></span>
               </a>
@@ -94,7 +98,7 @@
         </article>
 
         <article class="bento-card portrait-card reveal">
-          <img src="{{ asset(config('portfolio.portraits.barong')) }}" alt="Professional portrait of Vince M. Ybañez" loading="eager">
+          <img src="{{ '/' . ltrim(config('portfolio.portraits.barong'), '/') }}" alt="Professional portrait of Vince M. Ybañez" loading="eager">
           <div class="portrait-gradient"></div>
           <div class="portrait-bottom"><div><small>Get to know me</small><strong>Behind the code</strong></div><a class="small-arrow" href="#experience" aria-label="Read about Vince">↗</a></div>
         </article>
@@ -107,7 +111,7 @@
             <article class="bento-card bento-project reveal">
               <a class="project-screen" href="{{ route('projects.show', $project['slug']) }}" aria-label="Explore {{ $project['title'] }}">
                 @if(!empty($project['image']))
-                  <img src="{{ asset($project['image']) }}" alt="Preview of {{ $project['title'] }}" loading="lazy">
+                  <img src="{{ '/' . ltrim($project['image'], '/') }}" alt="Preview of {{ $project['title'] }}" loading="lazy">
                 @else
                   <div class="project-unavailable" aria-label="Preview coming soon"><span>✳</span><p>Preview coming soon</p></div>
                 @endif
@@ -127,13 +131,13 @@
       <section class="bento-section reveal" id="experience">
         <div class="section-heading"><div><span class="micro-label">02 / ABOUT ME</span><h2>My <em>journey.</em></h2></div><p>Engineering software with curiosity and purpose.</p></div>
         <div class="journey-grid">
-          <div class="bento-card journey-photo"><img src="{{ asset(config('portfolio.portraits.graduation')) }}" alt="Vince wearing his graduation gown" loading="lazy"></div>
+          <div class="bento-card journey-photo"><img src="{{ '/' . ltrim(config('portfolio.portraits.graduation'), '/') }}" alt="Vince wearing his graduation gown" loading="lazy"></div>
           <div class="journey-content"><div class="journey-item"><span>APR 2026 — PRESENT</span><h3>Junior Software Engineer</h3><p>NPAX Cebu Corporation — web and Android development supporting MOPA and business application workflows.</p></div><div class="journey-item"><span>JAN — APR 2026</span><h3>ERP Intern</h3><p>NPAX Cebu Corporation — ASP.NET Core MVC web development training and media-related tasks.</p></div><div class="journey-item"><span>2022 — 2026</span><h3>BS Information Technology</h3><p>University of Cebu — Lapu-Lapu and Mandaue. Consistent Dean's Lister as recorded in my resume.</p></div><div class="journey-item"><span>2024 — PRESENT</span><h3>Youth Council President</h3><p>Joanna Homes Youth Council — youth outreach, counseling, and disaster-risk-reduction activities.</p></div></div>
         </div>
       </section>
 
       <section class="bento-section contact-section reveal" id="contact"><span class="micro-label">03 / GET IN TOUCH</span><h2>Let's make something <em>happen.</em></h2><p>Have a collaboration, project, or opportunity in mind? I'd love to hear from you.</p>
-        <div class="contact-buttons"><a class="contact-primary" href="mailto:{{ config('portfolio.email') }}">Email me ↗</a><a href="tel:{{ preg_replace('/[^+0-9]/', '', config('portfolio.phone')) }}">{{ config('portfolio.phone') }}</a><a href="{{ config('portfolio.linkedin') }}" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div>
+        <div class="contact-buttons"><a class="contact-primary" href="mailto:{{ config('portfolio.email') }}">Email me ↗</a><a href="tel:{{ preg_replace('/[^+0-9]/', '', config('portfolio.phone')) }}">{{ config('portfolio.phone') }}</a><a href="{{ config('portfolio.linkedin') }}" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="{{ config('portfolio.github') }}" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
       </section>
     </main>
     <footer class="bento-footer"><a class="bento-brand" href="#home">Vince<span>.</span></a><div><a href="#home">Home</a><a href="#about">About</a><a href="#work">Work</a><a href="#contact">Contact</a></div><small>© {{ date('Y') }} Vince M. Ybañez. Built with Laravel.</small></footer>

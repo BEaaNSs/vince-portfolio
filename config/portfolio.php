@@ -8,7 +8,7 @@ return [
     'phone' => '+63906-536-2004',
     'facebook' => 'https://www.facebook.com/vince.ybanez.3/',
     'instagram' => 'https://www.instagram.com/04beans_/',
-    'github' => env('PORTFOLIO_GITHUB', ''),
+    'github' => env('PORTFOLIO_GITHUB', 'https://github.com/BEaaNSs'),
     'linkedin' => env('PORTFOLIO_LINKEDIN', 'https://www.linkedin.com/in/vince-yba%C3%B1ez-ab5ba3397/'),
     'resume_url' => env('PORTFOLIO_RESUME_URL', ''),
     'portraits' => ['barong' => 'images/vince-barong.webp', 'graduation' => 'images/vince-graduation.webp'],
