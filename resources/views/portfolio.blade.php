@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Portfolio of Vince M. Ybañez — junior software engineer, Laravel developer and creator of web and mobile applications.">
   <title>Vince M. Ybañez — Software Developer</title>
-  <link rel="stylesheet" href="{{ asset('css/portfolio.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/bento.css') }}">
-  <script defer src="{{ asset('js/portfolio.js') }}"></script>
-  <script defer src="{{ asset('js/bento.js') }}"></script>
+  <link rel="stylesheet" href="{{ secure_asset('css/portfolio.css') }}">
+  <link rel="stylesheet" href="{{ secure_asset('css/bento.css') }}">
+  <script defer src="{{ secure_asset('js/portfolio.js') }}"></script>
+  <script defer src="{{ secure_asset('js/bento.js') }}"></script>
 </head>
 <body class="bento-site">
   <div class="progress" id="scroll-progress" aria-hidden="true"></div>
